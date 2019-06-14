@@ -23,17 +23,7 @@ class Content extends React.Component {
     console.log(this.state.recipes);
   }
 
-  componentDidMount = () => {
 
-    const jsonRecipes = localStorage.getItem("recipes")
-  const getRecipes = JSON.parse(jsonRecipes);
-  this.setState({recipes : getRecipes})
-  }
-  
-  componentDidUpdate = () => {
-    const setRecipes = JSON.stringify(this.state.recipes);
-    localStorage.setItem("recipes", setRecipes);
-  }
 
   render(){
   return (
